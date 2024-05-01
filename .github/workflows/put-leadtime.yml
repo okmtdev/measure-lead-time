@@ -63,17 +63,17 @@ jobs:
                 title: .title,
                 user: .author.login,
                 url: .url,
-                base: .baseRefName,
                 head: .headRefName,
                 firstCommittedAt: .commits.nodes[0].commit.authoredDate,
                 createdAt: .createdAt,
-                firstReviewedAt: .reviews.nodes[0].createdAt,
+                lastReviewedAt: .reviews.nodes[0].createdAt,
                 mergedAt: .mergedAt,
                 additions: .additions,
-                deletions: .deletions
+                deletions: .deletions,
+                changedFiles: .changedFiles
               },
               type: "lead_time",
               token: $token
             } |
             @json' |
-          curl -L -H "Content-Type: application/json" -d @- "https://script.google.com/a/macros/revcomm.co.jp/s/AKfycbysh89QlUBSbMDciY-d7efuDO9cDLMhpIwL8Z4cKNpyLYUVOdTUABfyWC3q8vRLRrP0yA/exec"
+          curl -L -H "Content-Type: application/json" -d @- "https://script.google.com/macros/s/AKfycbzDkAGDBlblN4NYnTrt3Bg2rg_3przu3Coq0H49KhPsyMT5ri7jYPKU-UtzU2jdxXp4Vw/exec"
