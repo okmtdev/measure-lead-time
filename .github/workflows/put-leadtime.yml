@@ -44,7 +44,8 @@ jobs:
                   mergedAt
                   additions
                   deletions
-                  reviews(first: 1) {
+                  changedFiles
+                  reviews(last: 1) {
                     nodes {
                       ... on PullRequestReview {
                         createdAt
@@ -76,4 +77,4 @@ jobs:
               token: $token
             } |
             @json' |
-          curl -L -H "Content-Type: application/json" -d @- "https://script.google.com/macros/s/AKfycbzDkAGDBlblN4NYnTrt3Bg2rg_3przu3Coq0H49KhPsyMT5ri7jYPKU-UtzU2jdxXp4Vw/exec"
+          curl -L -H "Content-Type: application/json" -d @- "https://script.google.com/a/macros/revcomm.co.jp/s/AKfycbwJapBF-g_oUiOxqdXrFFAYFo8pOTGdYXHf7xnbeGCX2q1qxSDebKhYLV2O7vbLc1bVYA/exec"
