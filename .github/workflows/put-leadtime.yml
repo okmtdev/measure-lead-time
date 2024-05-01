@@ -63,14 +63,14 @@ jobs:
                 title: .title,
                 user: .author.login,
                 url: .url,
-                base: .baseRefName,
                 head: .headRefName,
                 firstCommittedAt: .commits.nodes[0].commit.authoredDate,
                 createdAt: .createdAt,
-                firstReviewedAt: .reviews.nodes[0].createdAt,
+                lastReviewedAt: .reviews.nodes[0].createdAt,
                 mergedAt: .mergedAt,
                 additions: .additions,
-                deletions: .deletions
+                deletions: .deletions,
+                changedFiles: .changedFiles
               },
               type: "lead_time",
               token: $token
