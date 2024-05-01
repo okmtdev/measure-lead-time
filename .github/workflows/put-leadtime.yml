@@ -1,6 +1,9 @@
 name: SpreadsheetにPull Requestの情報を送信
 on:
   pull_request:
+    branches:
+      - develop
+      - feature/*
     types:
       - closed
 jobs:
