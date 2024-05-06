@@ -77,4 +77,4 @@ jobs:
               token: $token
             } |
             @json' |
-          curl -L -H "Content-Type: application/json" -d @- "https://script.google.com/a/macros/revcomm.co.jp/s/AKfycbwJapBF-g_oUiOxqdXrFFAYFo8pOTGdYXHf7xnbeGCX2q1qxSDebKhYLV2O7vbLc1bVYA/exec"
+          curl -L -H "Content-Type: application/json" -d @- "https://script.google.com/macros/s/AKfycby9HErajrz9EGIAGI1fUSw30xM76YD3SRL1pAyEhIAhZuEDlNfiPju1KmM6SDyJJ5xRYA/exec"
