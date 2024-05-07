@@ -34,7 +34,8 @@ function insertLeadTimeData(postData) {
     data.firstReviewedAt,
     data.mergedAt,
     data.additions,
-    data.deletions
+    data.deletions,
+    data.changedFiles
   ]);
 }
 
