@@ -31,7 +31,6 @@ jobs:
                     login
                   }
                   url
-                  baseRefName
                   headRefName
                   commits(first: 1) {
                     nodes {
@@ -44,7 +43,8 @@ jobs:
                   mergedAt
                   additions
                   deletions
-                  reviews(first: 1) {
+                  changedFiles
+                  reviews(last: 1) {
                     nodes {
                       ... on PullRequestReview {
                         createdAt
@@ -76,4 +76,4 @@ jobs:
               token: $token
             } |
             @json' |
-          curl -L -H "Content-Type: application/json" -d @- "https://script.google.com/macros/s/AKfycbzDkAGDBlblN4NYnTrt3Bg2rg_3przu3Coq0H49KhPsyMT5ri7jYPKU-UtzU2jdxXp4Vw/exec"
+          curl -L -H "Content-Type: application/json" -d @- "https://script.google.com/macros/s/AKfycbx8l5vFT9J6fkwz1p1z-c7pdW_1bhm-2CNk-JL2ayPYgf0l-Ef9W3HPU6_-c6aOZSR8uQ/exec"
